@@ -98,7 +98,7 @@ fun main() {
 
 
 /*
-*   define a secondary constructor (No Primary Constructor)
+*   define a secondary constructor (with No Primary Constructor)
 */ 
 class User {  
     var name: String
@@ -114,5 +114,18 @@ class User {
     constructor(name: String, age: Int) {
         this.name = name
         this.age = age
+    }
+}
+
+
+/*
+*   define a secondary constructor (with a Primary Constructor)
+*/ 
+class Person(val name: String, var age: Int) {
+
+    // Secondary constructor delegating to the primary constructor
+    constructor(name: String) : this(name, 18) {
+        // Optional: Additional initialization logic code goes here
+        println("Secondary constructor called")
     }
 }
