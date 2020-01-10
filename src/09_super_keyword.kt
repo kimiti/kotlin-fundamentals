@@ -8,6 +8,7 @@ open class Robot {
     }
 }
 
+
 class CleaningRobot : Robot() {
     override val model = "Vacuum Bot" // Overriding parent property
     
